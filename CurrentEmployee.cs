@@ -9,12 +9,14 @@ public class CurrentEmployee : MonoBehaviour
     public TextMeshProUGUI jobTitle;
     public TextMeshProUGUI companyImportance;
     public TextMeshProUGUI reccomendedPay;
+    public TextMeshProUGUI hourlypay; 
     // Start is called before the first frame update
     void Start()
     {
         currentEmployee = new Employee();
         currentEmployee.job = currentEmployee.generateJob();
-    }
+        SelectPay.currentEmployeeCard = this.gameObject;
+     }
 
     // Update is called once per frame
     void Update()
@@ -24,5 +26,12 @@ public class CurrentEmployee : MonoBehaviour
             jobTitle.text = "Job Title: " + currentEmployee.job.jobTitle;
             companyImportance.text = "Company Role: " + currentEmployee.job.companyImportance;
              reccomendedPay.text = "Reccomended Pay: " + currentEmployee.job.reccomendedPay;
+              
+
+    }
+
+    public void test()
+    {
+        CreateEmployee.newEmployeeNeeded = true;
     }
 }

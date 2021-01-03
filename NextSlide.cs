@@ -11,7 +11,7 @@ public class NextSlide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thisButton = assignlistener(thisButton);   
+        thisButton.onClick.AddListener(switchSlide);
     }
 
     // Update is called once per frame
@@ -20,12 +20,7 @@ public class NextSlide : MonoBehaviour
         
     }
 
-    public Button assignlistener(Button button)
-    {
-        button.onClick.AddListener(switchSlide);
-
-        return button;
-    }
+  
 
     void switchSlide()
     {

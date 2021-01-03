@@ -8,7 +8,7 @@ public class Job : MonoBehaviour
     public string companyImportance;
     public string reccomendedPay; 
     private static string essentialWorker = "\"Essential\" Worker ;)";
-    private static string someImportance = "Does kinda important work.";
+    private static string someImportance = "Does slightly important work.";
     private static string tenAnHour = "10$/Hr";
     private static string twentyFiveAnHour = "25$/Hr";
     private static string oneHundredAnHour = "100$/Hr";
