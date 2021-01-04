@@ -46,7 +46,7 @@ public class Employee : MonoBehaviour
     public Employee()
     {
         this.employeeName = generateName();
-      
+        //Do not generate a job here! Straight up does not work- something about the order these files are called.
 
     }
 
