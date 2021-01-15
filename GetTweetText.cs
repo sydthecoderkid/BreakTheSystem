@@ -5,27 +5,29 @@ using System.IO;
 
 public class GetTweetText : MonoBehaviour
 {
-    public static ArrayList paths = new ArrayList();
-    public string currentpath;
+    public static string currentpath;
+    public static Book currentBook;
     // Start is called before the first frame update
     void Start()
     {
-        paths.Add(@"\Assets\BookTextFiles\1001CorporateTweets.txt");
-        paths.Add(@"\Assets\BookTextFiles\ANTIFAHANDBOOK.txt");
-        System.Random rand = new System.Random();
-        currentpath = (string)paths[rand.Next(0, paths.Count)];
-        generateText(currentpath);
+         
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 
-    public static void generateText(string path)
+    public static void generateText()
     {
-        Debug.Log(path);
+        currentpath = currentBook.path;
+        Debug.Log(currentpath);
+        string[] lines = System.IO.File.ReadAllLines(currentpath);
+        System.Random rand = new System.Random();
+        Debug.Log((string)lines[rand.Next(0, lines.Length-1)]);
+
     }
 }
