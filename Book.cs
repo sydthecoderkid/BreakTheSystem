@@ -14,7 +14,7 @@ public class Book : MonoBehaviour
     void Start()
     {
         thisButton.onClick.AddListener(setBook);
-        
+        thisBooksCurrent = new CurrentBook();
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class Book : MonoBehaviour
 
     void setBook()
     {
-        CurrentBook.changeBook(thisObject);
+        thisBooksCurrent.changeBook(thisObject);
         
     }
 

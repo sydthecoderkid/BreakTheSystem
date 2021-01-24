@@ -21,13 +21,12 @@ public class GetTweetText : MonoBehaviour
        
     }
 
-    public static void generateText()
+    public static string generateText()
     {
         currentpath = currentBook.path;
-        Debug.Log(currentpath);
         string[] lines = System.IO.File.ReadAllLines(currentpath);
         System.Random rand = new System.Random();
-        Debug.Log((string)lines[rand.Next(0, lines.Length-1)]);
+        return (string)lines[rand.Next(0, lines.Length-1)];
 
     }
 }
